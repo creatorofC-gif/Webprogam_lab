@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My College Website</title>
+
+    <style>
+        body{
+      background-color: lightblue;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    .tooltip{
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .tooltip::after{
+      content: attr(data-tip);
+      position: absolute;
+      bottom: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      color: black;
+      padding: 5px 8px;
+      border: 1px solid black;
+      border-radius: 5px;
+      font-size: 13px;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .tooltip:hover::after{
+      opacity: 1;
+      visibility: visible;
+    }
+
+    </style>
+
+    <h1 id="collegeName"  title="College Name" class="tooltip" data-tip="This is the college name" >
+    KJ Somaiya School of Engineering
+  </h1>
+
+  <p id="year" class="yearText" title="Academic Year" style="font-weight: bold;">
+    Academic Year: 2025-2026
+  </p>
+
+  <div id="logoBox">
+    <img src="Screenshot 2026-01-15 183102.png" alt="College Logo" width="100" height="100">
+
+  </div>
+
+  <h2 id="festTitle" class="festTitle" title="Fest Title">
+    
+    <!--Strong tag used-->
+    <strong>The Great College Fest!</strong>
+
+  </h2>
+
+    <!--Em tag used-->
+   <h3><em><mark>Coding marathon</mark></em></h3>
+   <p>This is a new style of coding anthem. In this u code and run as well.
+    <!--Span and abbr tag used-->
+    <Span title="info" class="tooltip" data-tip="Run and Code"><abbr title="Run and code">RC</abbr></Span></p>
+  </p>
+  <div>
+
+    <!--Sup and Sub tag is used-->
+    <sup>Note: Registration required</sup>
+    <div>
+      <sub>Contact: <a href="mailto:contact@college.edu">contact@college.edu</a></sub>
+    </div>
+
+  </div>
+
