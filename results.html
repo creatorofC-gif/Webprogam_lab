@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Results</title>
+    
+</head>
+
+<Style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    table {
+        width: 80%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        
+    }
+    th, td {
+        padding: 12px;
+        border: 2px solid #ddd;
+        text-align: center;
+    }
+</Style>
+<body>
+    <h1> Results </h1>
+    <!-- Table for displaying event results -->
+    <table>
+
+        <!--thead used for clubbing all the headings together-->
+        <thead>
+            <th>Event Name</th>
+            <th>Participant Name</th>
+            <th>Score</th>
+        </thead>
+
+        <!--tbody used for clubbing all the data rows together-->
+        <tbody>
+            <tr>
+                <td>Coding Marathon</td>
+                <td>Abc</td>
+                <td>95</td>
+            </tr>
+
+            <tr>
+                <td>Web Design</td>
+                <td>Xyz</td>
+                <td>88</td>
+            </tr>
+            <tr>
+                <td>Hackathon</td>
+                <td>Def</td>
+                <td>92</td>
+            </tr>
+            <tr>
+                <td>App Development</td>
+                <td>Ghi</td>
+                <td>85</td>
+            </tr>
+
+        </tbody>
+
+        <!--tfoot used for clubbing all the footer rows together-->
+        <tfoot>
+            <tr>
+                <td colspan="3">Winner is Abc</td>
+            </tr>
+        </tfoot>
+
+    </table>
+</body>
