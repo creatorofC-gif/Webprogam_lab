@@ -1,0 +1,26 @@
+ol,ul{
+  list-style:none;
+  padding-left:0;
+}
+
+li{
+  padding:8px;
+  background:aliceblue;
+  margin:5px;
+}
+
+li:hover{
+  background:#cce;
+}
+
+li:first-child{
+  font-weight:bold;
+}
+
+li:last-child{
+  color:darkblue;
+}
+
+li ol li{
+  background:#ffe;
+}

@@ -1,0 +1,12 @@
+img{
+    max-width: 100%;
+    border: 2px solid black;
+    box-shadow: 0px 0px 20px black;
+    height:auto;
+    display: block;
+    margin: auto;
+
+}
+h1{
+    color: brown;
+}

@@ -1,0 +1,41 @@
+  body{
+      background-color: lightblue;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    .tooltip{
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .tooltip::after{
+      content: attr(data-tip);
+      position: absolute;
+      bottom: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      color: black;
+      padding: 5px 8px;
+      border: 1px solid black;
+      border-radius: 5px;
+      font-size: 13px;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .tooltip:hover::after{
+      opacity: 1;
+      visibility: visible;
+    }
+
+p{
+    line-height:3.0;
+    letter-spacing:1px;
+    color:crimson;
+}
+mark{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}

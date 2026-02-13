@@ -1,0 +1,45 @@
+    body{
+      background-color: lightblue;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .tooltip{
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .tooltip::after{
+      content: attr(data-tip);
+      position: absolute;
+      bottom: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      color: black;
+      padding: 5px 8px;
+      border: 1px solid black;
+      border-radius: 5px;
+      font-size: 13px;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .tooltip:hover::after{
+      opacity: 1;
+      visibility: visible;
+    }
+
+/*Element ID*/
+
+#collegeName{
+  color:#003366;
+  font-size:32px;
+}
+
+/* Class Selector */
+.yearText{
+  color:#444;
+  font-size:18px;
+}

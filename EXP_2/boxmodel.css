@@ -1,0 +1,20 @@
+
+.title{
+    color: red;
+    margin-bottom: 40px;
+    padding-left: 20px;
+     text-align: center;
+        
+}
+
+div{
+  margin:20px;
+  padding:20px;
+  border:2px solid black;
+  box-sizing:border-box;   
+}
+
+blockquote{
+  box-shadow:0 0 10px gray;
+  padding:20px;
+}
