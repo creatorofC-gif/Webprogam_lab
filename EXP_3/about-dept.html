@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Department</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.section {
+  margin: 20px;
+}
+</style>
+</head>
+<body>
+
+<h1>About the Department</h1>
+
+<button id="toggleVisionBtn">Toggle Vision</button>
+<button id="toggleMissionBtn">Toggle Mission</button>
+<button id="toggleHodBtn">Toggle HoD Message</button>
+
+<div id="visionSection" class="section">
+  <h2>Vision</h2>
+  <p>To be a leading department in Computer Science education.</p>
+</div>
+
+<div id="missionSection" class="section">
+  <h2>Mission</h2>
+  <p>Provide quality education and promote innovation.</p>
+</div>
+
+<blockquote id="hodMsg" class="section">
+  <h2>HOD Message</h2>
+  <p>Welcome to our department. We focus on excellence and innovation.</p>
+</blockquote>
+
+<script>
+// Task 6: DOM Manipulation - Show/Hide Content
+function toggleElementDisplay(elementId) {
+  const element = document.getElementById(elementId);
+  element.style.display = element.style.display === "none" ? "block" : "none";
+}
+
+document.getElementById("toggleVisionBtn").addEventListener("click", function () {
+  toggleElementDisplay("visionSection");
+});
+
+document.getElementById("toggleMissionBtn").addEventListener("click", function () {
+  toggleElementDisplay("missionSection");
+});
+
+document.getElementById("toggleHodBtn").addEventListener("click", function () {
+  toggleElementDisplay("hodMsg");
+});
+</script>
+
+</body>
+</html>

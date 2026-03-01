@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+</head>
+<body>
+  <h1>Register for Hackathons Now!</h1>
+
+  <form id="registrationForm">
+    <label for="name">Name:</label>
+    <input id="name" type="text" name="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input id="email" type="email" name="email" required><br><br>
+
+    <label for="password">Password:</label>
+    <input id="password" type="password" name="password" required><br><br>
+
+    Gender:
+    <input type="radio" name="gender" value="Male" required> Male
+    <input type="radio" name="gender" value="Female" required> Female<br><br>
+
+    <label for="event">Event Type:</label>
+    <select id="event" name="event">
+      <option value="codeathon">Codeathon</option>
+      <option value="webdeving">Webdeving</option>
+    </select><br><br>
+
+    Skills:
+    <input type="checkbox" name="skill" value="python"> Python
+    <input type="checkbox" name="skill" value="javascript"> JavaScript<br><br>
+
+    <button type="submit">Submit and Register</button>
+    <button type="reset">Reset</button><br><br>
+  </form>
+
+  <p id="formMessage"></p>
+
+  <script>
+    // Extra objective: client-side validation and feedback
+    const form = document.getElementById("registrationForm");
+    const formMessage = document.getElementById("formMessage");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const nameValue = document.getElementById("name").value.trim();
+      const passwordValue = document.getElementById("password").value;
+      const selectedSkills = document.querySelectorAll("input[name='skill']:checked");
+
+      if (nameValue.length < 3) {
+        formMessage.innerText = "Name must have at least 3 characters.";
+        formMessage.style.color = "red";
+        return;
+      }
+
+      if (passwordValue.length < 6) {
+        formMessage.innerText = "Password must be at least 6 characters.";
+        formMessage.style.color = "red";
+        return;
+      }
+
+      if (selectedSkills.length === 0) {
+        formMessage.innerText = "Please select at least one skill.";
+        formMessage.style.color = "red";
+        return;
+      }
+
+      formMessage.innerText = "Registration submitted successfully.";
+      formMessage.style.color = "green";
+      form.reset();
+    });
+  </script>
+</body>
+</html>

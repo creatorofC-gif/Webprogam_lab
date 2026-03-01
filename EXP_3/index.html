@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My College Website</title>
+  <style>
+    body {
+      background-color: lightblue;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    .tooltip {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+    }
+    .tooltip::after {
+      content: attr(data-tip);
+      position: absolute;
+      bottom: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      color: black;
+      padding: 5px 8px;
+      border: 1px solid black;
+      border-radius: 5px;
+      font-size: 13px;
+      opacity: 0;
+      visibility: hidden;
+    }
+    .tooltip:hover::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="collegeName" class="tooltip" data-tip="This is the college name">
+    KJ Somaiya School of Engineering
+  </h1>
+
+  <p id="year" style="font-weight: bold;">Academic Year: 2025-2026</p>
+
+  <div id="logoBox">
+    <img src="Screenshot 2026-01-15 183102.png" alt="College Logo" width="100" height="100">
+  </div>
+
+  <h2 id="festTitle">The Great College Fest!</h2>
+  <p id="info">Welcome to our college fest website.</p>
+
+  <p id="welcomeMsg"></p>
+  <p id="currentDate"></p>
+
+  <script>
+    // Task 1: JavaScript Initialization and DOM Access
+    const studentName = "Naitik";
+    const today = new Date();
+
+    document.getElementById("welcomeMsg").innerText = "Welcome, " + studentName + "!";
+    document.querySelector("#currentDate").innerText = "Today's Date: " + today.toDateString();
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interaction</title>
+</head>
+<body>
+  <h1>Student Interaction</h1>
+  <button id="showNoticeBtn">Show Notice</button>
+  <button id="hideNoticeBtn">Hide Notice</button>
+
+  <p id="notice" style="display:none;">Next event briefing starts at 2:00 PM in Auditorium.</p>
+
+  <script>
+    const notice = document.getElementById("notice");
+
+    document.getElementById("showNoticeBtn").addEventListener("click", function () {
+      notice.style.display = "block";
+    });
+
+    document.getElementById("hideNoticeBtn").addEventListener("click", function () {
+      notice.style.display = "none";
+    });
+  </script>
+</body>
+</html>

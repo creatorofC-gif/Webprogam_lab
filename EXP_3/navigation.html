@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+a {
+  margin: 10px;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<h1>Navigation Page</h1>
+
+<button onclick="redirectHome()">Home</button>
+<button onclick="redirectEventDetails()">Event Details</button>
+<button onclick="redirectClubs()">Clubs</button>
+<button onclick="redirectAboutDepartment()">About Department</button>
+
+<p id="clickedPage"></p>
+
+<script>
+// Task 7: Event Handling - User Interaction
+function redirectHome() {
+  window.location.href = "index.html";
+  alert("Redirecting to Home Page");
+}
+
+function redirectEventDetails() {
+  window.location.href = "event-details.html";
+  alert("Redirecting to Event Details Page");
+}
+
+function redirectClubs() {
+  window.location.href = "clubs.html";
+  alert("Redirecting to Clubs Page");
+}
+
+function redirectAboutDepartment() {
+  window.location.href = "about-department.html";
+  alert("Redirecting to About Department Page");
+}
+
+</script>
+
+</body>
+</html>

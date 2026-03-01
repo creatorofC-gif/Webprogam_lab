@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Details</title>
+<style>
+body {
+  background-color: lightblue;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>KJ Somaiya School of Engineering</h1>
+<h2>The Great College Fest</h2>
+
+<h3>Coding Marathon</h3>
+<p>Registration Required</p>
+
+<h3 id="seatInfo"></h3>
+<h3 id="statusInfo"></h3>
+<h3 id="categoryMsg"></h3>
+
+<script>
+// Task 2: Variables, Data Types and Operators
+const totalSeats = 120;
+const registeredSeats = 75;
+const registrationOpen = true;
+const remainingSeats = totalSeats - registeredSeats;
+
+const seatMessage =
+  "Total Seats: " + totalSeats +
+  " | Registered: " + registeredSeats +
+  " | Remaining Seats: " + remainingSeats;
+
+document.getElementById("seatInfo").innerText = seatMessage;
+
+document.getElementById("statusInfo").innerText = registrationOpen
+  ? "Registration Status: Open"
+  : "Registration Status: Closed";
+
+// Task 3: Control Flow - Event Category Selection
+const eventCategory = "Technical";
+let message = "";
+if (eventCategory === "Technical") {
+  message = "This is a Technical Event.";
+} else if (eventCategory === "Cultural") {
+  message = "This is a Cultural Event.";
+} else {
+  message = "This is a Sports Event.";
+}
+
+document.getElementById("categoryMsg").innerText = message;
+</script>
+
+</body>
+</html>

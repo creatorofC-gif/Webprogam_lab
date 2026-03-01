@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clubs</title>
+<style>
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.featured {
+  color: red;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<h1>College Club Events</h1>
+
+<ul id="eventList"></ul>
+<p id="eventCount"></p>
+
+<script>
+// Task 4: Arrays - Event List Management
+const events = ["Hackathon", "CodeFest", "Drama Fest", "Dance Battle"];
+const featuredEvent = "Hackathon";
+
+// Task 5: Functions - Reusable Logic
+function displayEvents() {
+  const list = document.getElementById("eventList");
+  list.innerHTML = "";
+
+  events.forEach((eventName) => {
+    const li = document.createElement("li");
+    li.innerText = eventName;
+
+    if (eventName === featuredEvent) {
+      li.classList.add("featured");
+    }
+
+    list.appendChild(li);
+  });
+}
+
+const countEvents = () => events.length;
+
+displayEvents();
+document.getElementById("eventCount").innerText = "Total Events: " + countEvents();
+</script>
+
+</body>
+</html>
